@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+YPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -61,27 +61,30 @@
            </div>
         </saction>
 
-        <section class="especialidades">
+        <section class="especiliadades">
             <div class="interface">
-                <h2 class="title">MINHAS <SPAN>ESPECIALIDADES.</SPAN></h2>
+                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
                     <div class="especialidades-box">
                         <i class="bi bi-code-square"></i>
-                        <h3> Website</h3>
+                        <h3>Website</h3>
                         <p> transformando lógica em soluções com Portugol, HTML, CSS, um pouco de JavaScript e banco de dados MySQL. Cada linha de código é um passo na minha jornada como desenvolvedor</p>
-                        
-                       
+                    </div><!--especialidades-box-->
 
                     <div class="especialidades-box">
                         <i class="bi bi-mortarboard"></i>
-                        <h3> Faculdade</h3>
+                        <h3>Faculdade</h3>
                         <p> Estou no primeiro período da faculdade de Análise e Desenvolvimento de Sistemas, mas minha vontade de aprender e crescer na área é gigante — o começo pode ser recente, mas o potencial é de quem vai longe</p>
-                       
+                    </div><!--especialidades-box-->
+
                     <div class="especialidades-box">
                         <i class="bi bi-cup-hot"></i>
-                        <h3> Curiosidades</h3>
+                        <h3>Curiosidades</h3>
                         <p> Amante de animes (com um carinho especial por JoJo's Bizarre Adventure), apaixonado por jogos eletrônicos — de Valorant até a intensidade psicodélica de Hotline Miami, estou sempre em busca de novas aventuras, seja em pixels ou em stands</p>
-
+                    </div><!--especialidades-box-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section><!--especiliadades-->
                         
                     
 
