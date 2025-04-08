@@ -1,4 +1,4 @@
-YPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@ YPE html>
 
                 </div>
                 <div class="img-topo-site"> 
-                    <img src="images/image_no_black_border.png" alt="">
+                    <img src="images/image_450px.jpg" alt="">
 
                 </div>
                </div>
@@ -85,6 +85,33 @@ YPE html>
                 </div><!--flex-->
             </div><!--interface-->
         </section><!--especiliadades-->
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="images/image_300px_2.jpg" alt="">
+                
+                    </div>
+                    <div class="txt-sobre">
+                        <h2>MUITO PRAZER, <SPAN>SOU CAIO BARRETO.</SPAN></h2>
+                        <p>Atualmente estou dando meus primeiros passos na programação, explorando conceitos e ferramentas para entender melhor esse universo. Gosto de aprender coisas novas, encarar desafios e acredito que a prática constante é o caminho para crescer. Estou animado com as possibilidades que a tecnologia oferece e focado em evoluir um pouco mais a cada</p>
+                        <div class="caio-social">
+
+                        <a href="https://www.instagram.com/caio_barreto__/?next=%2F"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9196813"><button><i class="bi bi-linkedin"></i></button></a>
+
+                        </div>
+
+                        
+                       
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
                         
                     
 
