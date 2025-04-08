@@ -45,7 +45,7 @@
                     <p>Olá! Meu nome é Caio Barreto, tenho 18 anos e estou começando minha jornada no mundo da programação. Sou movido pela curiosidade e pela vontade de aprender cada vez mais sobre tecnologia, desenvolvimento e criação de soluções que fazem a diferença. Estou sempre explorando novas linguagens, ferramentas e desafios, com o objetivo de evoluir como programador e construir projetos que me orgulhem. Esse é só o começo.</p>
 
                     <div class="caio-contatos">
-                        <a href="#">
+                        <a href="https://wa.me/+5581985935093">
                              <button>Entre em contato</button>
                         </a>
                     </div>
