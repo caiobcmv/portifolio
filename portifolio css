@@ -40,9 +40,18 @@ h2.title{
     color:#fff;
     font-size: 38px;
     text-align: center;
+    
 }
 h2.title span{
     color: #7132DB;
+}
+button:hover{
+    box-shadow:0px 0px 8px #fff;
+    transform: scale(1.05);
+    transition: .2s;
+}
+.txt-topo-site p{
+    text-align: justify;
 }
 
 /*estilo do cabercalho*/
@@ -108,7 +117,7 @@ section.topo-dos-site .flex{
 
 .topo-do-site .img-topo-site img{
     position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
+    animation: flutuar 1.5s ease-in-out infinite alternate;
     box-shadow: 0 0px 8px #7132DB;
     border-radius: 50px;
 
@@ -160,4 +169,44 @@ section.especiliadades .flex {
 }
 .titulo span{
     color: #7132DB;
+}
+/* estilo do sobre*/
+section.sobre{
+    padding: 80px 4%;
+
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+ color: #fff;
+}
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height:20px;
+    margin-bottom: -20px;
+}
+.sobre .txt-sobre h2 span{
+    color: #7132DB;
+    display: block;
+}
+.sobre .txt-sobre p{
+    text-align:justify;
+}
+
+.sobre .txt-sobre .caio-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #7132DB;
+    font-size: 22px;
+    cursor: pointer;
+}
+.sobre .img-sobre{
+    position: relative;
+    box-shadow: 0 0px 8px #7132DB;
+    border-radius: 20px;
+
 }
