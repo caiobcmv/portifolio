@@ -11,6 +11,7 @@
       <!-- bootstrap icons final-->
   <link rel="stylesheet" href="style.css">
     <title>portifólio</title>
+    <link rel="icon" href="images/c54a55f2-1b82-463a-b141-f2e9b2132ace.png">
 </head>
 <body>
 
