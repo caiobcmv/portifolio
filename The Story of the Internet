@@ -1,135 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- goolgle fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- fim google fontes-->
-     <!-- bootstrap icons inicio-->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-      <!-- bootstrap icons final-->
-  <link rel="stylesheet" href="caio.css">
-    <title>portifólio</title>
-    <link rel="icon" href="images/c54a55f2-1b82-463a-b141-f2e9b2132ace.png">
-    
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site com Tema Claro/Escuro</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --header-color: #1f1f1f;
+      --link-color: #bbbbbb;
+      --btn-color: #6200ee;
+      --btn-hover: #3700b3;
+    }
+
+    body.light {
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+      --header-color: #ffffff;
+      --link-color: #555;
+      --btn-color: #0066cc;
+      --btn-hover: #004b99;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--header-color);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #3333;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--link-color);
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--text-color);
+    }
+
+    main {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    main h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .btn {
+      background-color: var(--btn-color);
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin: 10px;
+    }
+
+    .btn:hover {
+      background-color: var(--btn-hover);
+    }
+
+    .highlight-image {
+      margin-top: 40px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>The story of the internet</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">historia</a>
+      <a href="#">linha do tempo</a>
+      <a href="#">avaliação</a>
+      <a href="#">linha do tempo</a>
+      <a href="#">Jogo</a>
+      <button class="btn" onclick="toggleTheme()">Alternar Tema</button>
+    </nav>
+  </header>
+
+  <main>
     
+    <h2>Bem-vindo ao The story of the internet</h2>
+    <img class="highlight-image" src="The_Story_of_the_Internet-Stephen_Bryant.jpg" alt="Imagem destaque">
+    
+    <p>The Story of the Internet" explores how the internet was born, how it evolved, and how it reshaped the world. It highlights key moments—from the early days of ARPANET to the rise of the modern web—featuring the inventors, companies, and breakthroughs that made it all possible.</p>
+    
+    
+    <div class="amazon">
+        <a href="https://www.amazon.com.br/Story-Internet-English-KATRINA-HENRY-ebook/dp/B09YNDJS44/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2XH5DG8RU3V52&dib=eyJ2IjoiMSJ9.DBjIaqOfBTBVmMQCeBHTOQSY9xH6kTq3ovMGPopft7iksk2hLToYo1-6kO0G_FHLvEhLP4ShBwwrA5e659e-lAR-gKic2cfOPc6lEfFHKr-PV6F5PDW6zYQg5BIW0GBEkKOtA1QywS6Q_JsEQmKlfouHGbp4pcJ56CKnDItuuYPiEiyw6d4qWVJ4WxVRwjact2dd8ojd1LUPUr5mYCXqfUVdfbdyDQl5_A--CLgGHzbVkuzjSF2QLqUr0e-rhMcDe0BGLZIGyjIe1zQZFxI3EZmAAULZaYkrXYqRMoIwmpA.UVYu7Ea9XRJmPmNak4Asq-k__J980sLi2_XsYaDB39E&dib_tag=se&keywords=The+Story+of+the+Internet&qid=1744217253&sprefix=%2Caps%2C958&sr=8-2">
+            <button class="btn" onclick="">compre o livro</button>
+        </a>
+    </div>
+  </main>
 
-    <header>
-        <div class="interface">
-         <div class="logo">
-         <a href="#"></a>
-         <img src="images/portifolio_caio_resized.png" alt="logo">
-         </a>
-         </div> 
-         <nav calss="menu-desktop">
-            <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">historia</a></li>
-                <li><a href="#">linha do tempo</a></li>
-                <li><a href="#">avaliação</a></li>
-                <li><a href="#">Jogo</a></li>
-
-
-                
-            </ul>
-         </nav>
-         <div class="caio-contatos">
-            <a href="#">
-                <button>contatos</button>
-                
-            </a>
-         </div>
-    </header>
-
-    <main>
-        <saction class="topo-do-site">
-           <div calss="interface">
-               <div class="flex">
-                <div class="txt-topo-site">
-                    <h1> The Story of the Internet<span>!</span></h1>
-                    <p>Stephen Bryant tells the evolution of the Internet in an engaging way, showing how it transformed itself from a military project into a global network that changed the world. The book is divided into key moments, connecting people, technologies and historical decisions.
-                    </p>
-
-                    <div class="caio-contatos">
-                        <a href="https://www.amazon.com.br/Story-Internet-English-KATRINA-HENRY-ebook/dp/B09YNDJS44/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2XH5DG8RU3V52&dib=eyJ2IjoiMSJ9.DBjIaqOfBTBVmMQCeBHTOQSY9xH6kTq3ovMGPopft7iksk2hLToYo1-6kO0G_FHLvEhLP4ShBwwrA5e659e-lAR-gKic2cfOPc6lEfFHKr-PV6F5PDW6zYQg5BIW0GBEkKOtA1QywS6Q_JsEQmKlfouHGbp4pcJ56CKnDItuuYPiEiyw6d4qWVJ4WxVRwjact2dd8ojd1LUPUr5mYCXqfUVdfbdyDQl5_A--CLgGHzbVkuzjSF2QLqUr0e-rhMcDe0BGLZIGyjIe1zQZFxI3EZmAAULZaYkrXYqRMoIwmpA.UVYu7Ea9XRJmPmNak4Asq-k__J980sLi2_XsYaDB39E&dib_tag=se&keywords=The+Story+of+the+Internet&qid=1744217253&sprefix=%2Caps%2C958&sr=8-2">
-                             <button>Entre em contato</button>
-                        </a>
-                    </div>
-
-
-
-                </div>
-                <div class="img-topo-site"> 
-                    <img src="images/image_450px.jpg" alt="">
-
-                </div>
-               </div>
-           </div>
-        </saction>
-
-        <section class="especiliadades">
-            <div class="interface">
-                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-code-square"></i>
-                        <h3>Website</h3>
-                        <p> transformando lógica em soluções com Portugol, HTML, CSS, um pouco de JavaScript e banco de dados MySQL. Cada linha de código é um passo na minha jornada como desenvolvedor</p>
-                    </div><!--especialidades-box-->
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-mortarboard"></i>
-                        <h3>Faculdade</h3>
-                        <p> Estou no primeiro período da faculdade de Análise e Desenvolvimento de Sistemas, mas minha vontade de aprender e crescer na área é gigante — o começo pode ser recente, mas o potencial é de quem vai longe</p>
-                    </div><!--especialidades-box-->
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-cup-hot"></i>
-                        <h3>Curiosidades</h3>
-                        <p> Amante de animes (com um carinho especial por JoJo's Bizarre Adventure), apaixonado por jogos eletrônicos — de Valorant até a intensidade psicodélica de Hotline Miami, estou sempre em busca de novas aventuras, seja em pixels ou em stands</p>
-                    </div><!--especialidades-box-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--especiliadades-->
-
-        <section class="sobre">
-            <div class="interface">
-                <div class="flex">
-                    <div class="img-sobre">
-                        <img src="img" alt="">
-                
-                    </div>
-                    <div class="txt-sobre">
-                        <h2>MUITO PRAZER, <SPAN>SOU CAIO BARRETO.</SPAN></h2>
-                        <p>Atualmente estou dando meus primeiros passos na programação, explorando conceitos e ferramentas para entender melhor esse universo. Gosto de aprender coisas novas, encarar desafios e acredito que a prática constante é o caminho para crescer. Estou animado com as possibilidades que a tecnologia oferece e focado em evoluir um pouco mais a cada</p>
-                        <div class="caio-social">
-
-                       
-                        <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9196813"><button><i class="bi bi-linkedin"></i></button></a>
-
-                        </div>
-
-                        
-                       
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-                        
-                    
-
-
-                </div>
-            </div>
-        </section>
-    </main>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
 </body>
 </html>
