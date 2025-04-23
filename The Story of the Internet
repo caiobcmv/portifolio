@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Site com Tema Claro/Escuro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Zx+MWM5J2WAmc7ktzz..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
       --bg-color: #121212;
@@ -100,25 +101,252 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
+    html {
+  scroll-behavior: smooth;
+}
+.timeline-horizontal {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 40px 0;
+  gap: 40px;
+  position: relative;
+  scroll-behavior: smooth;
+  animation: slideIn 1.2s ease-in-out;
+}
+
+.timeline-item {
+  flex: 0 0 150px;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.timeline-item .icon {
+  font-size: 30px;
+  background-color: var(--btn-color);
+  color: white;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.timeline-item .icon:hover {
+  transform: scale(1.1);
+}
+
+.year {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px 0 4px;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.timeline-container {
+    overflow: auto;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;  
+  
+}
+
+/* Para Chrome, Safari e outros WebKit */
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-track {
+  display: flex;
+  gap: 60px;
+  position: relative;
+  padding: 40px 0;
+  width: max-content; /* <- isso é o mais importante */
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%; /* agora sim: ocupa o comprimento total do conteúdo */
+  background-color: var(--btn-color);
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.timeline-event {
+  position: relative;
+  flex: 0 0 auto;
+  width: 220px;
+  text-align: center;
+  z-index: 1;
+}
+
+.timeline-icon {
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  background-color: var(--btn-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.timeline-icon:hover {
+  transform: scale(1.1);
+}
+
+.timeline-content {
+  background: var(--header-color);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.year {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.desc {
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .timeline-event {
+    width: 180px;
+  }
+}
+body {
+  overflow-y: auto; /* ou hidden se quiser bloquear completamente */
+}
+#avaliacoes-livro {
+  padding: 30px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.review {
+  background: #fff;
+  border-left: 4px solid #007bff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.stars {
+  font-size: 20px;
+  color: gold;
+  margin-bottom: 6px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+#quiz {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+}
+
+.pergunta {
+  margin-bottom: 20px;
+}
+
+.pergunta h3 {
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  margin-right: 6px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
   <header>
     <h1>The story of the internet</h1>
     <nav>
-      <a href="#">Início</a>
-      <a href="#">historia</a>
-      <a href="#">linha do tempo</a>
-      <a href="#">avaliação</a>
-      <a href="#">linha do tempo</a>
-      <a href="#">Jogo</a>
-      <button class="btn" onclick="toggleTheme()">Alternar Tema</button>
+      <a href="#">start</a>
+      <a href="#">timeline</a>
+      <a href="#">assessment</a>
+      <a href="#">game</a>
+      <button class="btn" onclick="toggleTheme()">
+        Toggle Theme</button>
     </nav>
   </header>
 
   <main>
     
-    <h2>Bem-vindo ao The story of the internet</h2>
+    
+    <h2>Welcome The story of the internet</h2>
     <img class="highlight-image" src="The_Story_of_the_Internet-Stephen_Bryant.jpg" alt="Imagem destaque">
     
     <p>The Story of the Internet" explores how the internet was born, how it evolved, and how it reshaped the world. It highlights key moments—from the early days of ARPANET to the rise of the modern web—featuring the inventors, companies, and breakthroughs that made it all possible.</p>
@@ -126,15 +354,239 @@
     
     <div class="amazon">
         <a href="https://www.amazon.com.br/Story-Internet-English-KATRINA-HENRY-ebook/dp/B09YNDJS44/ref=sr_1_2?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2XH5DG8RU3V52&dib=eyJ2IjoiMSJ9.DBjIaqOfBTBVmMQCeBHTOQSY9xH6kTq3ovMGPopft7iksk2hLToYo1-6kO0G_FHLvEhLP4ShBwwrA5e659e-lAR-gKic2cfOPc6lEfFHKr-PV6F5PDW6zYQg5BIW0GBEkKOtA1QywS6Q_JsEQmKlfouHGbp4pcJ56CKnDItuuYPiEiyw6d4qWVJ4WxVRwjact2dd8ojd1LUPUr5mYCXqfUVdfbdyDQl5_A--CLgGHzbVkuzjSF2QLqUr0e-rhMcDe0BGLZIGyjIe1zQZFxI3EZmAAULZaYkrXYqRMoIwmpA.UVYu7Ea9XRJmPmNak4Asq-k__J980sLi2_XsYaDB39E&dib_tag=se&keywords=The+Story+of+the+Internet&qid=1744217253&sprefix=%2Caps%2C958&sr=8-2">
-            <button class="btn" onclick="">compre o livro</button>
+            <button class="btn" onclick="">buy the book</button>
         </a>
     </div>
+
+    <section id="timeline" style="margin-top: 100px;">
+        <h2 style="text-align: center; margin-bottom: 40px;">Internet Timeline</h2>
+        <div class="timeline-container">
+          <div class="timeline-track">
+            <!-- Repetir estrutura abaixo para cada evento -->
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-satellite"></i></div>
+              <div class="timeline-content">
+                <p class="year">1957</p>
+                <p class="desc">USSR launches Sputnik. USA creates ARPA..</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-project-diagram"></i></div>
+              <div class="timeline-content">
+                <p class="year">1960s</p>
+                <p class="desc">Development of ARPANET and data packets..</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="timeline-content">
+                <p class="year">1969</p>
+                <p class="desc">First ARPANET connection between universities..</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-envelope"></i></div>
+              <div class="timeline-content">
+                <p class="year">1972</p>
+                <p class="desc">Creating an email and using "@".</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="timeline-content">
+                <p class="year">1983</p>
+                <p class="desc">TCP/IP and the term "Internet" emerge.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-lightbulb"></i></div>
+              <div class="timeline-content">
+                <p class="year">1989</p>
+                <p class="desc">Tim Berners-Lee proposes the WWW..</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-globe"></i></div>
+              <div class="timeline-content">
+                <p class="year">1993</p>
+                <p class="desc"> Mosaic browser released.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-shopping-cart"></i></div>
+              <div class="timeline-content">
+                <p class="year">1994–95</p>
+                <p class="desc">Yahoo! and Amazon emerge. The beginning of e-commerce.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-event">
+              <div class="timeline-icon"><i class="fas fa-users"></i></div>
+              <div class="timeline-content">
+                <p class="year">2000s</p>
+                <p class="desc">Internet in everyday life. Facebook  (2004).</p>
+                
+
+                
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        </div>
+      </section>
+    </div>
+  </section>
+  <section id="assessment" style="margin-top: 200px;">
+    <div class="tabs">
+        <button class="btn" onclick="showTab('timeline')">🕒 Timeline</button>
+        <button class="btn" onclick="showTab('avaliacoes')">📚 assessment</button>
+      </div>
+      
+      <div id="timeline" class="tab-content" style="display: block;">
+        <!-- Aqui fica sua timeline -->
+      </div>
+      
+      <div id="avaliacoes" class="tab-content" style="display: none;">
+        <h2>What are they saying about the book?</h2>
+        
+        <div class="review">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="quote">"A fascinating book that brilliantly connects history and technology."</p>
+            <p class="author">– Revista Tech & Cultura</p>
+          </div>
+        
+          <div class="review">
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <p class="quote">"Mandatory reading for anyone who wants to understand the evolution of the internet."</p>
+            <p class="author">– Prof. Ana Mendes, UFRJ</p>
+          </div>
+        
+          <div class="review">
+            <div class="stars">⭐⭐⭐☆☆</div>
+            <p class="quote">"Clarity, depth and an engaging narrative."</p>
+            <p class="author">– Blog Leitura Nerd</p>
+          </div>
+      </div>
+      <section id="quiz">
+        <h2>Quiz: Teste seu Conhecimento</h2>
+        <div id="quiz-container"></div>
+        <button onclick="verificarRespostas()">Enviar</button>
+        <p id="resultado"></p>
+      </section>
+  </section>
   </main>
 
   <script>
+    
     function toggleTheme() {
       document.body.classList.toggle('light');
     }
+
+    const timeline = document.getElementById("timeline");
+    const track = timeline.querySelector(".timeline-track");
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    track.addEventListener("mousedown", (e) => {
+      isDown = true;
+      timeline.classList.add("dragging");
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener("mouseleave", () => {
+      isDown = false;
+      timeline.classList.remove("dragging");
+    });
+
+    track.addEventListener("mouseup", () => {
+      isDown = false;
+      timeline.classList.remove("dragging");
+    });
+
+    track.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch suporte para celular
+    track.addEventListener("touchstart", (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener("touchend", () => {
+      isDown = false;
+    });
+
+    track.addEventListener("touchmove", (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      track.scrollLeft = scrollLeft - walk;
+    });
+    
+    function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+    document.getElementById(tabId).style.display = 'block';
+  }
+
+  const perguntas = [
+    {
+      pergunta: "Em que ano foi lançado o satélite Sputnik?",
+      opcoes: ["1955", "1957", "1961", "1969"],
+      resposta: "1957"
+    },
+    {
+      pergunta: "Quem propôs a World Wide Web (WWW)?",
+      opcoes: ["Bill Gates", "Tim Berners-Lee", "Alan Turing", "Mark Zuckerberg"],
+      resposta: "Tim Berners-Lee"
+    },
+    {
+      pergunta: "Qual o protocolo base da Internet?",
+      opcoes: ["HTTP", "FTP", "TCP/IP", "SMTP"],
+      resposta: "TCP/IP"
+    }
+  ];
+
+  const container = document.getElementById("quiz-container");
+
+  perguntas.forEach((q, i) => {
+    const div = document.createElement("div");
+    div.className = "pergunta";
+    div.innerHTML = `<h3>${q.pergunta}</h3>` + q.opcoes.map((op, j) =>
+      `<label><input type="radio" name="pergunta${i}" value="${op}">${op}</label><br>`
+    ).join("");
+    container.appendChild(div);
+  });
+
+  function verificarRespostas() {
+    let acertos = 0;
+    perguntas.forEach((q, i) => {
+      const respostaSelecionada = document.querySelector(`input[name="pergunta${i}"]:checked`);
+      if (respostaSelecionada && respostaSelecionada.value === q.resposta) {
+        acertos++;
+      }
+    });
+    document.getElementById("resultado").textContent = `Você acertou ${acertos} de ${perguntas.length} perguntas!`;
+  }
+</script>
+    
   </script>
 </body>
 </html>
