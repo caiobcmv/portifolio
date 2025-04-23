@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Site com Tema Claro/Escuro</title>
+  <title>The Story of the Internet</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Zx+MWM5J2WAmc7ktzz..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     :root {
@@ -337,7 +337,7 @@ button {
       <a href="#">start</a>
       <a href="#">timeline</a>
       <a href="#">assessment</a>
-      <a href="#">game</a>
+      <a href="#">Quiz</a>
       <button class="btn" onclick="toggleTheme()">
         Toggle Theme</button>
     </nav>
@@ -477,7 +477,7 @@ button {
           </div>
       </div>
       <section id="quiz">
-        <h2>Quiz: Teste seu Conhecimento</h2>
+        <h2>Quiz: Test your Knowledge</h2>
         <div id="quiz-container"></div>
         <button onclick="verificarRespostas()">Enviar</button>
         <p id="resultado"></p>
@@ -548,17 +548,17 @@ button {
 
   const perguntas = [
     {
-      pergunta: "Em que ano foi lançado o satélite Sputnik?",
+      pergunta: "In what year was the  Sputnik satellite  launched?",
       opcoes: ["1955", "1957", "1961", "1969"],
       resposta: "1957"
     },
     {
-      pergunta: "Quem propôs a World Wide Web (WWW)?",
+      pergunta: "Who proposed the World Wide Web (WWW)?",
       opcoes: ["Bill Gates", "Tim Berners-Lee", "Alan Turing", "Mark Zuckerberg"],
       resposta: "Tim Berners-Lee"
     },
     {
-      pergunta: "Qual o protocolo base da Internet?",
+      pergunta: "What is the base protocol of the Internet?",
       opcoes: ["HTTP", "FTP", "TCP/IP", "SMTP"],
       resposta: "TCP/IP"
     }
