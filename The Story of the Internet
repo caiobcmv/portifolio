@@ -328,16 +328,17 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+
   </style>
 </head>
 <body>
   <header>
     <h1>The story of the internet</h1>
-    <nav>
-      <a href="#">start</a>
-      <a href="#">timeline</a>
-      <a href="#">assessment</a>
-      <a href="#">Quiz</a>
+        <nav class="navbar">
+            <a href="#inicio">Start</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#avaliacoes-livro">Assessment</a>
+            <a href="#quiz">Quiz</a>
       <button class="btn" onclick="toggleTheme()">
         Toggle Theme</button>
     </nav>
