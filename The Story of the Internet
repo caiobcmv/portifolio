@@ -479,7 +479,7 @@ button {
       <section id="quiz">
         <h2>Quiz: Test your Knowledge</h2>
         <div id="quiz-container"></div>
-        <button onclick="verificarRespostas()">Enviar</button>
+        <button onclick="verificarRespostas()">To send</button>
         <p id="resultado"></p>
       </section>
   </section>
@@ -583,7 +583,7 @@ button {
         acertos++;
       }
     });
-    document.getElementById("resultado").textContent = `Você acertou ${acertos} de ${perguntas.length} perguntas!`;
+    document.getElementById("resultado").textContent = `You got it right ${acertos} of ${perguntas.length} questions!`;
   }
 </script>
     
